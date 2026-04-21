@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
   <header>
-    <nav>
-      <RouterLink to="/">首页</RouterLink>
-      <RouterLink to="/about">关于</RouterLink>
-    </nav>
+    <span class="title">Quietly</span>
   </header>
 
   <main>
@@ -21,19 +18,9 @@ header {
   border-bottom: 1px solid #e5e5e5;
 }
 
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  color: #2c3e50;
-  text-decoration: none;
-}
-
-nav a.router-link-active {
+.title {
   font-weight: 600;
-  color: #42b883;
+  color: #2c3e50;
 }
 
 main {

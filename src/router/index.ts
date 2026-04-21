@@ -4,18 +4,15 @@ import {
   type RouteRecordRaw,
 } from 'vue-router'
 
-import HomeView from '../views/HomeView.vue'
-
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView,
+    name: 'chat',
+    component: () => import('../views/ChatView.vue'),
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue'),
+    path: '/chat',
+    redirect: '/',
   },
 ]
 
